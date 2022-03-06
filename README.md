@@ -10,3 +10,5 @@ Requires that you are using python 3 and on a GNU/Linux environment.
 ## **Usage**
 
 ![prompt](images/preview.png)
+
+You will need to add your packages in the list of packages hardcoded. Replace with your own, its safe to remove the existing ones.
