@@ -12,14 +12,21 @@ from shutil import which
 # Add the packages to check in the list pkgs = []
 
 print(G + '[+]' + C + ' Checking Dependencies...' + W)
-pkgs = ['python', 'pip3', 'php']
+pkgs = ['python', 'pip3', 'testpackage']
 installed = True
 for pkg in pkgs:
 	present = which(pkg)
 	if present == None:
-		print(R + '[-] ' + W + pkg + C + ' is not Installed!')
+		print(R + '[-] ' + W + pkg + ' is not Installed!')
 		installed = False
 	else:
-		pass
+		print(G + '[+] ' + W + pkg + W + ' already installed')
+
+if not installed:
+	print("\nPlease install missing dependancies!")
+	exit(1)
+
+print("Dependancies satisfied!")
+
 
 # The rest of your code goes here
